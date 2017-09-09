@@ -3,7 +3,7 @@ P.player = (function() {
 
   var stage;
   var frameId = null;
-  var isFullScreen = false;
+  var isFullScreen = null;
 
   var progressBar = document.querySelector('.progress-bar');
   var player = document.querySelector('.player');
@@ -42,7 +42,7 @@ P.player = (function() {
       turboClick();
     } else {
       stage.start();
-      pause.className = 'pause';
+      pause.className = 'true';
       stage.stopAll();
       stage.triggerGreenFlag();
     }
